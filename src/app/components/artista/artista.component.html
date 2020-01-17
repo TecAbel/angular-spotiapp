@@ -1,1 +1,21 @@
-<p>artista works!</p>
+<app-loading *ngIf="loading"> </app-loading>
+
+<div *ngIf="!loading" class="row animated fadeIn">
+    <div class="col-2">
+        <img [src]="datosArtista.images | noimage" class="img-thumbnail" alt="">
+    </div>
+    <div class="col">
+        <h2> {{ datosArtista.name }} </h2>
+        <p>
+            <a class="artist-link" [href]="datosArtista.external_urls.spotify" target="_blank">Página de <span class="text-verde"> {{datosArtista.name}} </span> en <span class="text-verde" >Spotify</span> </a>
+        </p>
+        <p>
+            <small>Seguidores: </small> <strong class="text-verde">{{datosArtista.followers.total}}</strong>
+        </p>
+    </div>
+    <div class="col-4 text-right">
+        <button routerLink="/search" class="btn btn-outline-warning">
+            Regresar
+        </button>
+    </div>
+</div>

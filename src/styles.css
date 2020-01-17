@@ -1,12 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+    --primario: #1db954;
+}
+
 body {
     background-color: black!important;
     color: white !important;
+    font-size: 20px!important;
 }
 
 hr {
     border-color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .regresar {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
+.text-verde {
+    color: var(--primario);
+}
+
+.artist-link,
+.artist-link:hover {
+    color: white;
 }
 
 .main-container {
@@ -18,7 +39,7 @@ hr {
 }
 
 .img-circle {
-    border-radius: 100%;
+    border-radius: 100%!important;
     width: 150px;
 }
 
