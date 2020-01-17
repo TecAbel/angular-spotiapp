@@ -10,15 +10,21 @@ export class SearchComponent {
 
   artistas: any[] = [];
 
-  constructor( private spotify: SpotifyService ) { }
+  loading: boolean;
+
+  constructor( private spotify: SpotifyService ) {
+    
+   }
 
   buscarArtista(termino: string ) {
+    this.loading = true;
     // console.log(termino);
-
+    
     this.spotify.getArtist(termino)
         .subscribe( (resp: any) => {
           console.log(resp);
           this.artistas = resp;
+          this.loading = false;
         });
   }
 
