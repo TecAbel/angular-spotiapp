@@ -6,14 +6,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class NoimagePipe implements PipeTransform {
 
   transform(images: any[]): string {
-    
-    if(!images){
+
+    if (!images) {
       return 'assets/img/noimage.png';
     }
 
-    if(images.length > 0){
+    if (images.length > 0) {
       return images[0].url;
-    }else{
+    } else {
       return 'assets/img/noimage.png';
     }
 

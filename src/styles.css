@@ -14,13 +14,6 @@ hr {
     border-color: white;
 }
 
-@media only screen and (max-width: 768px) {
-    .regresar {
-        margin-bottom: 20px;
-        width: 100%;
-    }
-}
-
 .text-verde {
     color: var(--primario);
 }

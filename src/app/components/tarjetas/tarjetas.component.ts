@@ -17,14 +17,14 @@ export class TarjetasComponent implements OnInit {
   }
 
   artista( item: any ){
-    if(item.type === 'artist' ){
+    if (item.type === 'artist' ) {
       this.artistaId = item.id;
-    } else{
+    } else {
       this.artistaId = item.artists[0].id;
     }
-    //console.log(this.artistaId);
+    // console.log(this.artistaId);
 
-    this.router.navigate(['/artista', this.artistaId]); 
+    this.router.navigate(['/artista', this.artistaId]);
   }
 
 }
