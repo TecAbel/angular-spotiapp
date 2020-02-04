@@ -16,7 +16,7 @@ export class TarjetasComponent implements OnInit {
   ngOnInit() {
   }
 
-  artista( item: any ){
+  artista( item: any ) {
     if (item.type === 'artist' ) {
       this.artistaId = item.id;
     } else {
