@@ -14,6 +14,10 @@ hr {
     border-color: white;
 }
 
+table {
+    color: white!important;
+}
+
 .text-verde {
     color: var(--primario);
 }

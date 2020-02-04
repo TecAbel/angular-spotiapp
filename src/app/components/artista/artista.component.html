@@ -22,3 +22,31 @@
         </button>
     </div>
 </div>
+
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Album</th>
+                    <th>Canción</th>
+                    <th>Vista previa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let track of tracks">
+                    <td> <img [src]="track.album.images | noimage" class="img-thumb"> </td>
+                    <td> {{ track.album.name }} </td>
+                    <td> {{ track.name }} </td>
+                    <td *ngIf="track.preview_url">
+                        <audio [src]="track.preview_url" controls></audio>
+                    </td>
+                    <td *ngIf="!track.preview_url">
+                        No disponible
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
